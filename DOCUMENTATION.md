@@ -28,7 +28,7 @@ Extend a WebDriver instance with helpers. **All helpers are on the `helper` prop
 **Parameters**
 
 -   `driver` **ThenableWebDriver** The WebDriver instance you'd like to extend.
--   `selenium` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The selenium module you're using, i.e. `require('selenium-webdriver')`. This library
+-   `webdriver` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The `selenium-webdriver` module you're using, i.e. `require('selenium-webdriver')`. This library
       cannot bring in its own version, so you need to pass in yours.
 -   `options` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
     -   `options.origin` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Origin of the test server, e.g. `http://localhost:8080`.
@@ -38,11 +38,11 @@ Extend a WebDriver instance with helpers. **All helpers are on the `helper` prop
 **Examples**
 
 ```javascript
-const selenium = require('selenium-webdriver');
+const webdriver = require('selenium-webdriver');
 const seleniumHelpers = require('@mapbox/selenium-helpers');
 
-let driver = new selenium.Builder().forBrowser('chrome').build();
-driver = seleniumHelpers(driver, selenium, {
+let driver = new webdriver.Builder().forBrowser('chrome').build();
+driver = seleniumHelpers(driver, webdriver, {
   origin: 'http://localhost:8080'
 });
 

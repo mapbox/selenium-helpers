@@ -32,11 +32,8 @@
     "**/*.js": [
       "format",
       "document",
-      "git add"
-    ],
-    "*.md": [
-      "document",
-      "git add"
+      "git add",
+      "git add DOCUMENTATION.md"
     ]
   }
 }

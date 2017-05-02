@@ -47,7 +47,7 @@ Type: ThenableWebDriver
 
 ### until
 
-A shortcut to the Selenium library's [`until`](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html)
+A shortcut to the Selenium library's [`until`](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html).
 
 ### pause
 

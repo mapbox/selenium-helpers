@@ -1,0 +1,36 @@
+{
+  "name": "selenium-helpers",
+  "version": "0.1.0",
+  "description": "Helpers for Selenium tests",
+  "main": "index.js",
+  "scripts": {
+    "document": "documentation build 'lib/*.js' -f md --shallow -o DOCUMENTATION.md",
+    "precommit": "lint-staged",
+    "format": "prettier --single-quote --print-width=100 --write index.js 'lib/**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapbox/selenium-helpers.git"
+  },
+  "author": "Mapbox",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/mapbox/selenium-helpers/issues"
+  },
+  "homepage": "https://github.com/mapbox/selenium-helpers#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "documentation": "^4.0.0-rc.1",
+    "husky": "^0.13.3",
+    "lint-staged": "^3.4.1",
+    "prettier": "^1.2.2"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "format",
+      "document"
+    ]
+  }
+}

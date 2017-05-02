@@ -1,5 +1,5 @@
 {
-  "name": "selenium-helpers",
+  "name": "@mapbox/selenium-helpers",
   "version": "0.1.0",
   "description": "Helpers for Selenium tests",
   "main": "index.js",
@@ -13,7 +13,6 @@
     "url": "git+https://github.com/mapbox/selenium-helpers.git"
   },
   "author": "Mapbox",
-  "private": true,
   "bugs": {
     "url": "https://github.com/mapbox/selenium-helpers/issues"
   },

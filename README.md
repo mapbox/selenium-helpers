@@ -1,2 +1,3 @@
-# selenium-helpers
-Helpers for Selenium tests
+# @mapbox/selenium-helpers
+
+Helpers for Selenium tests.

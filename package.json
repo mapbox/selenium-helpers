@@ -34,7 +34,7 @@
       "document",
       "git add"
     ],
-    "**/*.md": [
+    "*.md": [
       "document",
       "git add"
     ]

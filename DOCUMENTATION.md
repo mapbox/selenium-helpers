@@ -43,11 +43,11 @@ Type: ThenableWebDriver
 
 ### Key
 
-[Key constants](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Key.html) from webdriver.
+[Key constants](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Key.html) from the Selenium library.
 
 ### until
 
-A shortcut to [`webdriver.until`](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html).
+A shortcut to the Selenium library's [`until`](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html)
 
 ### pause
 

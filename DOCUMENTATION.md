@@ -23,21 +23,38 @@
 
 ## extendDriver
 
-Extend a ThenableWebDriver instance with helper functions.
+Extend a WebDriver instance with helpers. **All helpers are on the `helper` property of the returned driver.**
 
 **Parameters**
 
--   `driver` **ThenableWebDriver** 
+-   `driver` **ThenableWebDriver** The WebDriver instance you'd like to extend.
+-   `selenium` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The selenium module you're using, i.e. `require('selenium-webdriver')`. This library
+      cannot bring in its own version, so you need to pass in yours.
 -   `options` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
-    -   `options.origin` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Origin of the test server.
-    -   `options.loaderSelector` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Selector that identifies blocking loaders. (optional, default `'[data-test`)
+    -   `options.origin` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Origin of the test server, e.g. `http://localhost:8080`.
+    -   `options.loaderSelector` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Selector that identifies blocking
+          loaders. (optional, default `'[data-test`)
 
-Returns **[ExtendedDriver](#extendeddriver)** 
+**Examples**
+
+```javascript
+const selenium = require('selenium-webdriver');
+const seleniumHelpers = require('@mapbox/selenium-helpers');
+
+let driver = new selenium.Builder().forBrowser('chrome').build();
+driver = seleniumHelpers(driver, selenium, {
+  origin: 'http://localhost:8080'
+});
+
+driver.helpers.waitForElement(..);
+```
+
+Returns **[ExtendedDriver](#extendeddriver)** The extended WebDriver, with helpers available on the `helpers` property.
 
 ## ExtendedDriver
 
 A Selenium [ThenableWebDriver](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_ThenableWebDriver.html)
-extended with helper functions.
+extended with helpers on the `helpers` property.
 
 Type: ThenableWebDriver
 
@@ -65,7 +82,7 @@ Load a root-relative path. This is an actual page load, not a dynamic routing.
 
 **Parameters**
 
--   `path` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Must be root-relative
+-   `path` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Must be root-relative.
 
 Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;Thenable>** 
 

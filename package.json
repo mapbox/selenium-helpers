@@ -31,7 +31,12 @@
   "lint-staged": {
     "**/*.js": [
       "format",
-      "document"
+      "document",
+      "git add"
+    ],
+    "**/*.md": [
+      "document",
+      "git add"
     ]
   }
 }
